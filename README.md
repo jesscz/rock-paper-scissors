@@ -1,0 +1,1 @@
+I am writing code in JavaScript to play a game of Rock Paper Scissors. The computer will generate one of the three (rock, paper or scissors) as an answer and intake one from the user. A winner will be chosen from the answers and announced.
