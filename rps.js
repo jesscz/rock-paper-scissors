@@ -22,36 +22,57 @@ function computerPlay() {
 function round() {
     let computerSelection = (computerPlay());
     let playerSelection = prompt("Pick one: rock, paper or scissors.");
-    let count = 0;
+    let winCount = 0;
 
     if ((playerSelection.toLowerCase()) == computerSelection.toLowerCase()) {
-        return `You Tie! ${playerSelection} matches ${computerSelection}`
+        console.log(`You Tie! ${playerSelection} matches ${computerSelection}`);
+        return winCount;
     }
     else if ((playerSelection.toLowerCase()) == "rock") {
         if (computerSelection == "Paper") {
-            return `You Lose! ${computerSelection} beats ${playerSelection}`
+            console.log(`You Lose! ${computerSelection} beats ${playerSelection}`);
+            return --winCount;
         }
         else if (computerSelection == "Scissors") {
-            return `You Win! ${playerSelection} beats ${computerSelection}`
+            console.log(`You Win! ${playerSelection} beats ${computerSelection}`);
+            return ++winCount;
         }
     }
     else if ((playerSelection.toLowerCase()) == "paper") {
         if (computerSelection == "Rock") {
-            return `You Win! ${playerSelection} beats ${computerSelection}`
+            console.log(`You Win! ${playerSelection} beats ${computerSelection}`);
+            return ++winCount;
         }
         else if (computerSelection == "Scissors") {
-            return `You Lose! ${computerSelection} beats ${playerSelection}`
+            console.log(`You Lose! ${computerSelection} beats ${playerSelection}`);
+            return --winCount;
         }
     }
     else if ((playerSelection.toLowerCase()) == "scissors") {
         if (computerSelection == "Rock") {
-            return `You Lose! ${computerSelection} beats ${playerSelection}`
+            console.log(`You Lose! ${computerSelection} beats ${playerSelection}`);
+            return --winCount;
         }
         else if (computerSelection == "Paper") {
-            return `You Win! ${playerSelection} beats ${computerSelection}`
+            console.log(`You Win! ${playerSelection} beats ${computerSelection}`);
+            return ++winCount;
         }
     }
-    console.log(count);
+
+}
 
 
+function game() {
+    let playerWinCount = 0;
+    let compWinCount = 0;
+    while (playerWinCount < 5 && compWinCount < 5) {
+        if (round() > 0) {
+            playerWinCount++;
+            console.log(`You are ${playerWinCount}/5`);
+        } 
+        else if (round() < 0) {
+            compWinCount++;
+            console.log(`The computer is ${compWinCount}/5`);
+        }
+    }
 }
