@@ -21,7 +21,7 @@ function computerPlay() {
 
 function round() {
     let computerSelection = (computerPlay());
-    let playerSelection = prompt("Pick one: rock, paper or scissors.");
+    let playerSelection = prompt("Pick one: Linda, rock, paper or scissors.", 'rock');
     let winCount = 0;
 
     if ((playerSelection.toLowerCase()) == computerSelection.toLowerCase()) {
@@ -58,7 +58,7 @@ function round() {
             return ++winCount;
         }
     }
-
+    
 }
 
 
@@ -66,13 +66,16 @@ function game() {
     let playerWinCount = 0;
     let compWinCount = 0;
     while (playerWinCount < 5 && compWinCount < 5) {
-        if (round() > 0) {
+        let winner = round();
+
+        if (winner > 0) {
             playerWinCount++;
             console.log(`You are ${playerWinCount}/5`);
         } 
-        else if (round() < 0) {
+        else if (winner < 0) {
             compWinCount++;
             console.log(`The computer is ${compWinCount}/5`);
         }
+        
     }
 }
