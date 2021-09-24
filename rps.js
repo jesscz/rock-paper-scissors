@@ -1,3 +1,19 @@
+const rockBtn = document.getElementById("rock");
+const paperBtn = document.getElementById("paper");
+const scissorsBtn = document.getElementById("scissors");
+
+rockBtn.addEventListener("click", () => {
+    round("rock");
+});
+paperBtn.addEventListener("click", () => {
+    round("paper");
+});
+scissorsBtn.addEventListener("click", () => {
+    round("scissors");
+});
+
+
+
 function compNum(min, max) {
     return Math.floor(Math.random() * (max - min) ) + min;
   }
@@ -19,9 +35,8 @@ function computerPlay() {
 }
 
 
-function round() {
+function round(playerSelection) {
     let computerSelection = (computerPlay());
-    let playerSelection = prompt("Pick one: Linda, rock, paper or scissors.", 'rock');
     let winCount = 0;
 
     if ((playerSelection.toLowerCase()) == computerSelection.toLowerCase()) {
@@ -79,3 +94,5 @@ function game() {
         
     }
 }
+
+
