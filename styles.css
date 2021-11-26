@@ -1,0 +1,92 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:900i&display=swap');
+
+body {
+    margin: auto;
+    font-family: 'Arial', sans-serif;
+}
+div {
+    margin: auto;
+}
+
+.center{
+    display: flex;
+    flex-flow: column;
+    justify-items: center;
+    text-align: center;
+}
+.button {
+    display: inline-block;
+    margin: 10px 70px 20px;
+    background: none;
+    border: none;
+    width: 100px;
+    height: 100px;
+}
+
+#title {
+    margin-top: -10px;
+    margin-bottom: 3%;
+    font-family: 'Montserrat', sans-serif;
+    background: linear-gradient(
+    to right, 
+    hsl(7 87% 63%), hsl(178 40% 56%),
+    hsl(37 97% 63%)
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+#textContainer {
+    padding: 20px;
+}
+#response {
+    margin-top: -10px;
+    padding: 30px;
+}
+#score {
+    display: flex;
+    flex-flow: row;
+    justify-content: space-around;
+    background: none;
+    border: none;
+    padding: 30px;
+}
+#playerScore, #compScore {
+    margin: 10px 100px;
+    white-space: pre;
+}
+#final {
+    padding: 20px;
+    margin: 0px;
+    font-family: 'Montserrat', sans-serif;
+    background: linear-gradient(
+    to right, 
+    hsl(7 87% 63%), hsl(178 40% 56%),
+    hsl(37 97% 63%)
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+#rock {
+    background-image: url("rock.jpeg");
+    background-size: 100px 100px;
+}
+#paper {
+    background-image: url("paper.jpeg");
+    background-size: 100px 100px;
+}
+#scissors {
+    background-image: url("scissors.jpeg");
+    background-size: 100px 100px;
+}
+
+#rock:hover {
+    opacity: 0.85;
+}
+#paper:hover {
+    opacity: 0.85;
+}
+#scissors:hover {
+    opacity: 0.85;
+}

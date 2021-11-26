@@ -4,13 +4,33 @@
   <title>Rock-Paper-Scissors</title>
   <meta charset="UTF-8"/>
   <script src="rps.js" defer></script>
+  <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
-  <div>User input: 
-    <button id="rock">Rock</button>
-    <button id="paper">Paper</button>
-    <button id="scissors">Scissors</button>
+  <div class="center">
+    
+    <div id="title">
+      <h1>Can you beat the computer?</h1>
+      <h2>Rock, Paper or Scissors:</h2>
+    </div>
+
+    
+    <div id="answers">
+      <button class= "button" id="rock"></button>
+      <button class= "button" id="paper"></button>
+      <button class= "button" id="scissors"></button>
+    </div>
+
+    <div id="textContainer">
+      <div id="response"></div>
+      <div id="score">
+        <div id="compScore"></div>
+        <div id="playerScore"></div>
+      </div>
+      <div id="final"></div>
+    </div>
+
   </div>
-  
 </body>
 </html>
